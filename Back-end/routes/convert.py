@@ -18,8 +18,8 @@ class ConvertRequest(BaseModel):
 # ─── Helpers ────────────────────────────────────────────────────────────────
 
 def is_valid_youtube_url(url: str) -> bool:
-    pattern = r"^(https?://)?(www\.)?(youtube\.com/watch\?v=|youtu\.be/)[\w\-]{11}"
-    return bool(re.match(pattern, url.strip()))
+    pattern = r"(youtube\.com/watch\?v=|youtu\.be/)[\w\-]{11}"
+    return bool(re.search(pattern, url.strip()))
 
 def delete_file(path: str):
     """Elimina el archivo tras servirse (llamado en background)."""

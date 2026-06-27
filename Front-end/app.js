@@ -5,7 +5,7 @@
  * Cambia API_BASE_URL por la URL de tu servidor cuando hagas deploy.
  */
 
-const API_BASE_URL = "https://viomp3-production.up.railway.app/api"; // ← cambia esto en producción
+const API_BASE_URL = "https://viomp3-production.up.railway.app/"; // ← cambia esto en producción
 
 // ─── Estado ──────────────────────────────────────────────────────────────────
 

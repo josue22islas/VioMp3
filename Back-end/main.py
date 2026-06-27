@@ -7,11 +7,11 @@ app = FastAPI(title="VioMp3 API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # En producción: pon tu dominio exacto
-    allow_methods=["GET", "POST"],
+    allow_origins=["*"],
+    allow_methods=["*"],
     allow_headers=["*"],
+    allow_credentials=False,
 )
-
 app.include_router(router, prefix="/api")
 
 @app.get("/")

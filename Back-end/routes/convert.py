@@ -62,10 +62,14 @@ def embed_cover_mp3(mp3_path: str, thumbnail_url: str, title: str, artist: str):
         audio.tags["TPE1"] = TPE1(encoding=3, text=artist)
 
         # Carátula
+     # Carátula
         if cover_data:
+            # Detectar tipo de imagen por sus primeros bytes
+            mime = "image/png" if cover_data[:8] == b'\x89PNG\r\n\x1a\n' else "image/jpeg"
+
             audio.tags["APIC"] = APIC(
                 encoding=3,
-                mime="image/jpeg",
+                mime=mime,
                 type=3,       # 3 = Cover (front)
                 desc="Cover",
                 data=cover_data,

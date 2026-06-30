@@ -3,3 +3,5 @@ uvicorn[standard]==0.30.6
 yt-dlp
 aiofiles==24.1.0
 python-multipart==0.0.9
+mutagen
+requests

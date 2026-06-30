@@ -8,7 +8,7 @@ from mutagen.id3 import ID3, APIC, TIT2, TPE1, error as ID3Error
 router = APIRouter()
 
 TMP_DIR      = "/tmp/viomp3"
-DEFAULT_COVER = "/app/default_cover.jpg"
+DEFAULT_COVER = "/app/default_cover.png"
 os.makedirs(TMP_DIR, exist_ok=True)
 
 # ─── Modelos ──────────────────────────────────────────────────────────────────
